@@ -1,17 +1,17 @@
-createMatrix = (r, c) => {
+createMatrix = (r, c, f) => {
   const matrix = [];
   const row = [];
 
-  for (j = 0; j <= c; j++ ){
-    row.push(Math.random().toString(36).substring(2,6));
+  for (j = 0; j < c; j++ ){
+    row.push(f);
   }
 
-  for (i = 0; i <= r; i++) {
-    matrix.push(row);
+  for (i = 0; i < r; i++) {
+    matrix.push(row.map((f, cIndex)   => f(i, cIndex)));
   }
 
   return matrix;
 }
 
 
-console.log(createMatrix(8, 8 ));
+console.log(createMatrix(8, 8,  (i, j) => [i, j]));
