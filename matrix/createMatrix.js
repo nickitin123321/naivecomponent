@@ -3,7 +3,7 @@ createMatrix = (r, c) => {
   const row = [];
 
   for (j = 0; j <= c; j++ ){
-    row.push([]);
+    row.push(Math.random().toString(36).substring(2,6));
   }
 
   for (i = 0; i <= r; i++) {
@@ -14,4 +14,4 @@ createMatrix = (r, c) => {
 }
 
 
-console.log(createMatrix(10, 10 ));
+console.log(createMatrix(8, 8 ));
