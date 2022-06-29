@@ -13,5 +13,4 @@ createMatrix = (r, c, f) => {
   return matrix;
 }
 
-
-console.log(createMatrix(8, 8,  (i, j) => [i, j]));
+module.exports.createMatrix = createMatrix;
