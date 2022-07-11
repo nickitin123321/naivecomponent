@@ -1,4 +1,4 @@
-createMatrix = (r, c, f) => {
+module.exports = (r, c, f) => {
   const matrix = [];
   const row = [];
 
@@ -11,6 +11,4 @@ createMatrix = (r, c, f) => {
   }
 
   return matrix;
-}
-
-module.exports.createMatrix = createMatrix;
+};
